@@ -1,16 +1,15 @@
-export function fetchBooks(action) {
+export function fetchBooks() {
 
+    return (dispatch) => {
+        fetch('http://localhost:3000/api/v1/books', {
+            method: 'GET'
+        })
+            .then(response => response.json())
+            .then(books => dispatch({
+                type: 'FETCH_BOOKS',
+                payload: books
+                
+            }))
 
-
-    return action
-
-
-
-
-    //     fetch('http://localhost:3000/api/v1/books', {
-    //   method: 'GET'
-    // })
-    // .then(response => response.json())
-    // .then(data => console.log(data))
-
+    }
 }
