@@ -7,7 +7,10 @@ class BookInput extends React.Component {
 
         return (
             <div>
-                BookInput
+                <form>
+                    <label>Book Title:</label>
+                    <input type = 'text' placeholder='Title'/>
+                </form>
             </div>
 
         )
