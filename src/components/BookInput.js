@@ -32,11 +32,11 @@ class BookInput extends React.Component {
             <div>
                     <form onSubmit={this.handleSubmit}>
                         <label>Book Title: </label>
-                        <input type='text' placeholder='Title' value={this.state.name} name="title" onChange={this.handleChange} /><br />
+                        <input type='text' placeholder='Title' value={this.state.title} name="title" onChange={this.handleChange} /><br />
                         <label>Book Author: </label>
-                        <input type='text' placeholder='Author' value={this.state.balance} name="author" onChange={this.handleChange} /><br />
+                        <input type='text' placeholder='Author' value={this.state.author} name="author" onChange={this.handleChange} /><br />
                         <label>Book Description: </label>
-                        <input type='text' placeholder='Description' value={this.state.balance} name="description" onChange={this.handleChange} /><br />
+                        <input type='text' placeholder='Description' value={this.state.description} name="description" onChange={this.handleChange}/><br />
                         <input type="submit" />
                 </form>
             </div>
