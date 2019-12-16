@@ -1,11 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {addBook} from '../actions/addBook'
+import { addBook } from '../actions/addBook'
 
 class BookInput extends React.Component {
 
     state = {
-        name: '',
+        title: '',
         author: '',
         description: ''
     }
@@ -21,8 +21,8 @@ class BookInput extends React.Component {
         this.props.addBook(this.state)
         this.setState({
             title: '',
-            author:'',
-            description:''
+            author: '',
+            description: ''
         })
     }
 
@@ -30,16 +30,14 @@ class BookInput extends React.Component {
 
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label>Book Title:</label>
-                    <input type = 'text' placeholder='Title' value={this.state.title} name="title" onChange={this.handleChange}/>
-                    <br/>
-                        <label>Book Author:</label>
-                        <input type='text' placeholder='Author' valule={this.state.author} name="author" onChange={this.handleChange} />
-                        <br/>
-                    <label>Description of Book:</label>
-                    <input type='text' placeholder='Description' value={this.state.description} name="description" onChange={this.handleChange}/>
-                    <input type="submit"/>
+                    <form onSubmit={this.handleSubmit}>
+                        <label>Book Title: </label>
+                        <input type='text' placeholder='Title' value={this.state.name} name="title" onChange={this.handleChange} /><br />
+                        <label>Book Author: </label>
+                        <input type='text' placeholder='Author' value={this.state.balance} name="author" onChange={this.handleChange} /><br />
+                        <label>Book Description: </label>
+                        <input type='text' placeholder='Description' value={this.state.balance} name="description" onChange={this.handleChange} /><br />
+                        <input type="submit" />
                 </form>
             </div>
 
@@ -47,4 +45,4 @@ class BookInput extends React.Component {
 
     }}
 
-    export default connect(null, {addBook}) (BookInput)
+    export default connect(null, {addBook} ) (BookInput)
