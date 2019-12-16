@@ -1,4 +1,5 @@
 import React from 'react'
+import BookShow from './BookShow'
 
 const Books = (props) => {
 
@@ -6,7 +7,8 @@ const Books = (props) => {
         <div>
             Books
             {props.books.map(book => <li key={book.id}>
-                {book.title} - {book.author}</li> )}
+                <BookShow book={book}/>
+            </li> )}
         </div>
 
     )
