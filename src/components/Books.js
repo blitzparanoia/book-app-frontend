@@ -6,9 +6,9 @@ const Books = (props) => {
     return(
         <div>
             Books
-            {props.books.map(book => <li key={book.id}>
+            {props.books.map(book => <div key={book.id}>
                 <BookShow book={book}/>
-            </li> )}
+            </div> )}
         </div>
 
     )
