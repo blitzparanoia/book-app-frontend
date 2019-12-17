@@ -1,6 +1,8 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom'
 
+import ReviewsContainer from '../containers/ReviewsContainer'
+
 const Book = (props) => {
 
     console.log(props)
@@ -9,9 +11,12 @@ const Book = (props) => {
     console.log(book)
 
     return (
+        <div>
         <h3>
             {book ? book.title : null} - {book ? book.author : null}
         </h3>
+        <ReviewsContainer/>
+        </div>
     )
 
 
