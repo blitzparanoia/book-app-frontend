@@ -1,4 +1,6 @@
 import React from 'react'
+import ReviewInput from '../components/ReviewInput'
+import Reviews from '../components/Reviews'
 
 class ReviewsContainer extends React.Component {
 
@@ -7,6 +9,8 @@ class ReviewsContainer extends React.Component {
         return (
             <div>
                 ReviewsContainer
+                <ReviewInput/>
+                <Reviews/>
             </div>
         )
     }
