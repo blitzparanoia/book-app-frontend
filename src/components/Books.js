@@ -1,13 +1,16 @@
 import React from 'react'
-import BookShow from './BookShow'
+import { Route, Link } from 'react-router-dom'
+
+import Book from './Book'
 
 const Books = (props) => {
 
     return(
         <div>
             Books
-            {props.books.map(book => <div key={book.id}>
-                <BookShow book={book}/>
+            {props.books.map(book => 
+            <div key={book.id}>
+                <Book book={book}/>
             </div> )}
         </div>
 
