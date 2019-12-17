@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route, Link} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 
 const Book = (props) => {
 
@@ -9,9 +9,9 @@ const Book = (props) => {
     console.log(book)
 
     return (
-        <li>
+        <h3>
             {book ? book.title : null} - {book ? book.author : null}
-        </li>
+        </h3>
     )
 
 

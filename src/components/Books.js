@@ -9,9 +9,9 @@ const Books = (props) => {
         <div>
             Books
             {props.books.map(book => 
-            <div key={book.id}>
-                <Book book={book}/>
-            </div> )}
+            <li key={book.id}>
+<Link to={`/books/${book.id}`} >{book.title}</Link>
+            </li> )}
         </div>
 
     )
