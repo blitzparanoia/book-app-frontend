@@ -15,7 +15,7 @@ const Book = (props) => {
         <h3>
             {book ? book.title : null} - {book ? book.author : null}
         </h3>
-        <ReviewsContainer/>
+        <ReviewsContainer book={book}/>
         </div>
     )
 

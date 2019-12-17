@@ -8,9 +8,8 @@ class ReviewsContainer extends React.Component {
     render() {
         return (
             <div>
-                ReviewsContainer
                 <ReviewInput/>
-                <Reviews/>
+                <Reviews reviews= {this.props.book && this.props.book.reviews}/>
             </div>
         )
     }
