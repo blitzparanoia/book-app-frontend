@@ -24,7 +24,7 @@ export default function bookReducer(state = {books: [] }, action ) {
                     return book
                 }
             })
-            return { ...state, books: books }
+            return { ...state, books: booksReview }
 
 
         default:
