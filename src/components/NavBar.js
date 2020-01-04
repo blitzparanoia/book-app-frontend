@@ -1,15 +1,18 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-const NavLinks = (props) => {
+const NavBar = (props) => {
     return(
-        <div className="NavLinks">
+        <div className="NavBar">
+            <Link to="/"> Main Page </Link>
             <Link to="/books" style={{ paddingRight: '10px' }}>Books</Link>
 
             <Link to="/books/new">Add Book</Link>
+
+
 
         </div>
     )
 }
 
-export default NavLinks
+export default NavBar
