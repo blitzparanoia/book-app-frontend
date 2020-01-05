@@ -1,4 +1,5 @@
 import React from 'react'
+import {editBook} from '../actions/editBook'
 
 class BookEdit extends React.Component {
 
@@ -41,3 +42,9 @@ class BookEdit extends React.Component {
         )
     }
 }
+
+BookEdit.defaultProps = {
+    books: {}
+}
+
+export default connect (null, {editBook})(BookEdit)
