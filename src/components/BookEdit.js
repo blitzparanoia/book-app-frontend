@@ -8,10 +8,27 @@ class BookEdit extends React.Component {
         description: ''
     }
 
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+        let book = {...this.state, id: this.props.book.id}
+        this.props.editBook(book)
+        this.setState({
+            title: '',
+            author: '',
+            description: ''
+        })
+    }
+
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label>Book Title: </label>
                     <input type='text' placeholder='Title' value={this.state.title} name="title" onChange={this.handleChange} /><br />
                     <label>Book Author: </label>
