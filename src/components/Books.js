@@ -4,6 +4,10 @@ import Book from './Book'
 
 const Books = (props) => {
 
+    const handleDelete = (book) => {
+        props.deleteBook(book)
+    }
+
     return (
         <div className='Books'>
             <h2>Books List</h2>
