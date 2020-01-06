@@ -1,13 +1,14 @@
 import React from 'react'
+import {connect} from 'react-redux'
 import {editBook} from '../actions/editBook'
 
 class BookEdit extends React.Component {
-
     state = {
         title: '',
         author: '',
         description: ''
     }
+
 
     handleChange = (event) => {
         this.setState({
@@ -28,8 +29,9 @@ class BookEdit extends React.Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
+            <div className='BookEdit'>
+                Edit Book
+                    <form onSubmit={this.handleSubmit}>
                     <label>Book Title: </label>
                     <input type='text' placeholder='Title' value={this.state.title} name="title" onChange={this.handleChange} /><br />
                     <label>Book Author: </label>

@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-color: rgb(218, 199, 243);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  
+}
+
+a {
+  color: #3345FF;
+  text-decoration: underline;
+}
+
+div.MainPage{
+    text-align: center
+}
+
+div.Books{
+    text-align: center
+}
+
+div.BookEdit{
+    background-color: wheat;
+    width: 300px;
+    height: 111px;
+}

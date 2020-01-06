@@ -10,7 +10,7 @@ class ReviewsContainer extends React.Component {
     render() {
         return (
             <div>
-                Add A Review:
+                Add Review:
                 <ReviewInput book={this.props.book} />
                 <br/>
 

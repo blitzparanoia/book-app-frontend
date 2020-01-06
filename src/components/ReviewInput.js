@@ -27,7 +27,7 @@ class ReviewInput extends React.Component {
     render() {
         return (
 
-            <div>
+            <div className='ReviewInput'>
                 <form onSubmit={this.handleSubmit}>
                     <label>Comment:</label>
                     <input type='text' placeholder='Comment' value={this.state.comment} name="comment" onChange={this.handleChange} /><br />

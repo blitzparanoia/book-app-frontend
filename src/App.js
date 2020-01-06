@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import BooksContainer from './containers/BooksContainer'
 import NavBar  from './components/NavBar';
 
+import './App.css';
 
 
 class App extends React.Component { 

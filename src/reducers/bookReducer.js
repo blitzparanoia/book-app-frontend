@@ -27,14 +27,14 @@ export default function bookReducer(state = {books: [] }, action ) {
             return { ...state, books: booksReview }
 
             case 'EDIT_BOOK':
-                let booksThree = state.books.map(book => {
+                let booksTwo = state.books.map(book => {
                     if (book.id === action.payload.id) {
                         return action.payload
                     } else {
                         return book
                     }
                 })
-                return {...state, books: booksThree}
+                return {...state, books: booksTwo}
 
 
         default:

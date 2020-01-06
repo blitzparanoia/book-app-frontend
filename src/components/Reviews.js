@@ -12,7 +12,7 @@ const Reviews = (props) => {
     }
 
     return(
-        <div>
+        <div className='Reviews'>
             {props.reviews && props.reviews.map(review => 
            <li key={review.id}>
                    {review.comment}

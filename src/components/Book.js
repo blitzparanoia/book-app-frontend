@@ -1,4 +1,6 @@
 import React from 'react'
+import {Redirect} from 'react-router-dom'
+import BookEdit from './BookEdit'
 import ReviewsContainer from '../containers/ReviewsContainer'
 
 const Book = (props) => {
@@ -10,12 +12,16 @@ const Book = (props) => {
     return (
         <div>
         <h3>
-            {book ? book.title : null} - {book ? book.author : null}
+            Title: {book ? book.title : null}
             <br/>
+            Author: {book ? book.author : null}
+            <br/>
+             Description: {book ? book.description : null}
         </h3>
-        <h4>
-            Description: {book ? book.description : null}
-        </h4>
+        
+               <BookEdit book={book}/>
+        
+        <br/>
         <ReviewsContainer book={book}/>
         </div>
     )
